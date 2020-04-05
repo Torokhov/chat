@@ -1,0 +1,20 @@
+{
+  "watch": [
+    "./server"
+  ],
+  "verbose": true,
+  "ext": "ts",
+  "ignore": [
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ],
+  "env": {
+    "PORT": 3001,
+    "TS_NODE_PROJECT": "tsconfig.server.json",
+    "NODE_ENV": "development",
+    "ENV": "development"
+  },
+  "inspect": true,
+  "debug": true,
+  "exec": "node --inspect -r ts-node/register server/index.ts"
+}
