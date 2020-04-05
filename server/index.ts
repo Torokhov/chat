@@ -1,11 +1,20 @@
+import path from 'path';
 import express from 'express';
-debugger
-const app = express()
+
+const app = express();
+const http = require('http').createServer(app);
+const io = require('socket.io')(http);
+
+app.use(express.static(path.resolve('./build')));
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.sendFile(path.resolve('./build/index.html'))
 });
 
-app.listen(3001, function () {
+io.on('connection', () => {
+  console.log('a user connected');
+});
+
+http.listen(3001, () => {
   console.log('Example app listening on port 3001!');
 });

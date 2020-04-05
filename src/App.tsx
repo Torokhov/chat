@@ -2,7 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import openSocket from 'socket.io-client';
+
 function App() {
+  React.useEffect(() => {
+    openSocket('http://localhost:3001')
+  }, [])
   return (
     <div className="App">
       <header className="App-header">
