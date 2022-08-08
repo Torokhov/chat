@@ -1,0 +1,18 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:client": "npm run start --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\""
+  },
+  "keywords": [],
+  "author": "oleg_torokhov",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "prettier": "^2.7.1"
+  }
+}
