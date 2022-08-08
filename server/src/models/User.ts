@@ -1,10 +1,10 @@
 export interface User {
-    id: string;
-    name: string;
+   userId: string;
+   name: string;
 }
 
 export const createUser = (model: Partial<User>): User => ({
-    id: "",
-    name: "",
-    ...model
-})
+   userId: '',
+   name: '',
+   ...model,
+});
